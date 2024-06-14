@@ -1,4 +1,4 @@
-/** VARIABLES **/
+
 :root {
     --blanco: #FFFFFF;
     --azul: #132D46;
@@ -7,7 +7,7 @@
     --gris: #929497;
 }
 
-/** CONTENIDO **/
+
 * {
     margin: 0;
     padding: 0;
@@ -16,17 +16,19 @@
 
 html, body {
     height: 100%;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; 
+    min-height: 100vh;
+    background-color: var(--grisoscuro);
 }
 
 header {
     background-color: var(--azul);
+    font-family: 'Montserrat', sans-serif;
     padding: 1rem;
 }
 
@@ -59,7 +61,7 @@ header {
     gap: 1rem;
 }
 
-.navegacion a:hover {
+.navegacion:hover {
     color: var(--verde);
 }
 
@@ -74,73 +76,103 @@ header {
     left: 0;
     width: 100%;
     height: 1px;
-    background-color: var(--verde); 
+    background-color: var(--verde);
 }
 
 
-/** MAIN **/
-main {
-    flex: 1;
-    padding: 2rem;
-    padding-bottom: 10rem; 
-    text-align: center;
-    background-color: var(--azul);
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    background-color: var(--grisoscuro);
-}
 
-main h1 {
+h1 {
     font-size: 3rem;
-    margin-bottom: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     color: #DDDDDD;
     font-family: "Montserrat", sans-serif;
     font-weight: 900;
     font-style: normal;
+    text-align: center;
 }
 
-main h2 {
+.container h2 {
     font-size: 2rem;
     margin-bottom: 0.5rem;
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
     font-style: normal;
+    text-align: center;
 }
 
-.autos {
-    background-color: var(--verde);
-    border-radius: 30px;
-    margin: 0 auto; 
+.container {
+    display: grid;
     padding: 2rem;
-    width: 80%; 
-    height: 300px; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between; 
+    padding-bottom: 10rem;
+    background-color: var(--azul);
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    background-color: var(--grisoscuro);
+    align-content: center;
 }
 
-.autos h2 {
+.container div {
+    display: grid;
+    background-color: var(--azul);
+    border-radius: 30px;
+    padding: 2rem;
+}
+
+.container img {
+    margin: 2% auto 2% auto;
+    border-radius: 8px;
+    width: 100%;
+    height: auto;
+}
+.container img:hover{
+    transform: scale(1.1);
+}
+
+h2 {
     margin-bottom: 1rem;
     color: var(--blanco);
-    flex-shrink: 0;
-}
-
-.autos p {
-    width: 100%;
-    margin: 1rem 0;
-    color: var(--blanco);
-    font-family: "Montserrat", sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    font-size: 1.5rem;
     text-align: center;
-    flex: 1;
 }
 
-strong {
+.container th,
+.container td {
+    width: 100%;
+    color: var(--blanco);
+    text-align: center;
+}
+
+.container a {
+    padding: 1rem 2rem;
+    border: none;
+    background-color: var(--verde);
+    color: var(--azul);
+    border-radius: 3rem;
+    cursor: pointer;
     font-weight: 700;
+    text-align: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+    width: auto; 
+    text-decoration-color: var(--verde);
+}
+
+.container a:hover {
+    background-color: var(--blanco);
+    color: var(--verde);
+    text-decoration-color: var(--blanco);
+}
+
+@media (min-width: 768px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 /** FOOTER **/
@@ -167,13 +199,6 @@ footer .copyright {
 }
 
 
-/** MEDIA QUERIES **/
-@media (max-width: 1200px) {
-    .autos {
-        width: 100%;
-        height: auto;
-    }
-}
 
 @media (max-width: 768px) {
     .barra {
@@ -189,12 +214,8 @@ footer .copyright {
         padding: 1rem;
     }
 
-    .autos {
-        width: 100%;
-        height: auto;
-    }
 
-    main h1 {
+    h1 {
         font-size: 2rem;
     }
 
@@ -202,9 +223,6 @@ footer .copyright {
         font-size: 1.5rem;
     }
 
-    .autos p {
-        font-size: 1rem;
-    }
 }
 
 @media (max-width: 480px) {
@@ -227,14 +245,5 @@ footer .copyright {
 
     main {
         padding: 0.5rem;
-    }
-
-    .autos {
-        padding: 1rem;
-        height: auto;
-    }
-
-    .autos p {
-        font-size: 0.875rem;
     }
 }
