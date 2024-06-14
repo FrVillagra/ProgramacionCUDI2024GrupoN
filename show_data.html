@@ -1,0 +1,90 @@
+<html>
+  <head>
+    <link rel="icon" href="imagenes/icono.png">
+    <title>Alquiler de Autos</title>
+    <script src="https://kit.fontawesome.com/ac60a8a8db.js" crossorigin="anónimo"></script>
+  </head>
+
+
+<body bgcolor ="#2E4053" vlink="#212F3C">
+<header>
+    <img src="Imagenes/logo.png" alt="Logo Renting">
+    <nav style="text-align: right;">
+        <i><a style="color : white;" href="index.html" > Inicio / </a></i>
+        <i><a style="color: white;" href="misautos.html" > Mis autos /</a></i>
+        <i><a style= "color: white;" href="contact.html"> Contacto /</a></i>
+        <i><a style="color: white;" href="registrarreserva.html"> Registro /</a></i>
+        <i><a style="color: white;" href="controlYFacturación.html"> Control y facturacion</a></i>
+    </nav>
+</header>
+
+<p align=center>&nbsp;</p>
+<h1 align=center><font size="+1" color="#FFFFFF">LA SIGUIENTE INFORMACION HA SIDO ENVIADA COMO SUS COMENTARIOS:</font></h1>
+
+<table border="1" align=center width="226" style="background-color: #FFFFFF;">
+  <tr>
+    <th align="center">Campo de formulario</th>
+    <th align="center">Valor de campo</th>
+  </tr>
+
+<script language="javascript">
+var args = location.search.substr(1).split('&');
+for (var i = 0; i < args.length; ++i) {
+  var parts = args[i].split('=');
+  if (parts != null) {
+    var field = parts[0];
+    var value = parts[1];
+    if (value == null) {
+      value = "null"
+    }
+    else {
+      value = '"' + unescape(value.replace(/\+/g, ' ')) + '"';
+    }
+
+    document.writeln('<tr><td align="center">' + field + '</td>');
+    document.writeln('<td align="center">' + value + '</td></tr>');
+  }
+}
+</script>
+
+<noscript>
+<tr><td>
+<p>You need to turn on Javascript in your browser.</p>
+
+<p>In Microsoft Internet Explorer 4 or greater:</p>
+<ul>
+<li>From the "Tools" menu (in IE 4, it's the "View" menu), select "Internet Options".</li>
+<li>Click on the "Security" tab.</li>
+<li>Click on the "Custom Level" button. (In IE 4, select "Custom"
+and then click on "Settings...".)</li>
+<li>Under "Active scripting" make sure "Enable" is selected.</li>
+</ul>
+
+<p>In Netscape version 4 or greater:</p>
+<ul>
+<li>From the <b>Edit</b> menu, select <b>Preferences</b>.</li>
+<li>In the <b>Category</b> list on the left, click on the word "Advanced".</li>
+<li>In the panel on the right, make sure "Enable JavaScript" is checked.</li>
+<li>Click the <b>OK</b> button.</li>
+</ul>
+
+</td></tr>
+</noscript>
+
+</table>
+<br><br><br><br><br><br><br>
+</body>
+<footer style=" text-align: center; background-color: #616A6B;" >
+        
+    <br>
+    <br>
+    <a class="fa-brands fa-twitter" href="https://www.twitter.com" title="Twitter del negocio" target="_blank" ></a>
+    <a class="fa-brands fa-facebook" href="https://www.facebook.com"  title="Facebook del negocio" target="_blank"></a>
+    <a class="fa-brands fa-instagram" href="https://www.instagram.com" title="Instagram del negocio." target="_blank"></a>
+    <br>
+    <p style="color:white">DERECHOS RESERVADOS RentingFueguinos Renting@gmail.com 2024</p>
+    <br>
+    <br>
+</footer>
+
+</html>
