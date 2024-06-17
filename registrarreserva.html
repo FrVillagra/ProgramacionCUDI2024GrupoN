@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="Imagenes/icono.png">
+        <link rel="stylesheet" href="registrarreserva.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <title>Alquiler de Autos</title>
+        <script src="https://kit.fontawesome.com/ac60a8a8db.js" crossorigin="anónimo"></script>
+    </head>
+    
+    <body bgcolor ="#2E4053" vlink="#212F3C">
+      <header class="header">
+        <div class="contenido-header">
+            <div class="barra">
+                <a href="index.html">
+                    <img class="logo" src="Imagenes/logo.png" alt="Logotipo RentingFueguinos">
+                    <nav class="navegacion">
+                        <a href="index.html" > Inicio</a>
+                        <a href="misautos.html" > Mis autos</a>
+                        <a href="contacto.html"> Contacto </a>
+                        <a href="registrarreserva.html"> Registro </a>
+                        <a href="controlYFacturación.html"> Control y facturacion</a>
+                    </nav>
+                </a>
+            </div>
+            
+        </div>
+    </header>
+    <menu>
+        <div class="form-container">
+        <div class="form-header">
+            <h1>Registrar Reserva</h1>
+          </div>
+        <form action="show_data.html" target="_blank">
+            <div class="form-section">
+              
+              <label for="Nombre"><font>Nombre :</font></label>
+              <input type="text" name="Nombre" placeholder="Ingrese su nombre aquí..." required><br><br>
+              <label for="Apellido"><font>Apellido :</font></label>
+              <input type="text" name="Apellido" placeholder="Ingrese su apellido aquí..." required><br><br>
+              <label for="DNI"><font>D.N.I :</font></label>
+              <input type="text" name="DNI" pattern="[0-9]{7,8}" placeholder="Ingrese su número de documento" title="ingrese solamente numeros sin guion" required><br><br>
+              <label for="CUIL"><font>C.U.I.L :</font></label>
+              <input type="text" name="CUIT" pattern="[0-9]{11}" placeholder="Ingrese su número de CUIL" title="ingrese solamente numeros sin guion" required><br><br>
+              <label for="Domicilio"><font>Dirección :</font></label>
+              <input type="text" name="Domicilio" placeholder="Ingrese su dirección aquí..." required><br><br>
+            </div>
+            
+            <div class="form-section">
+              <label for="Localidad"><font>Ciudad :</font></label>
+              <input type="text" name="Localidad" value="C.A.B.A" required><br><br>
+              <label for="Código_Postal"><font>Código postal :</font></label>
+              <input type="text" name="Código_Postal" placeholder="Ingrese su código postal aquí..." title="ingrese solo numeros" required><br><br>
+              <label for="Fecha_de_Nacimiento"><font>Fecha de nacimiento :</font></label>
+              <input type="date" name="Fecha_de_Nacimiento" placeholder="DD/MM/YYYY"  required><br><br>
+              <label for="Numero"><font>Número de teléfono :</font></label>
+              <input type="tel" name="nomber" required><br><br>
+            </div>
+            
+            <div class="form-section">
+              <label for="Genero"><font>Género :</font></label>
+              <input type="radio" name="gender" value="hombre" checked><font>Hombre</font>
+              <input type="radio" name="gender" value="mujer"><font>Mujer</font>
+              <input type="radio" name="gender" value="otro"><font>Otro</font><br><br>
+            
+              <label for="MetodoPago"><font>Método de pago :</font></label>
+              <input type="radio" name="MetodoPago" value="Efectivo" checked><font>Efectivo en mano</font>
+              <input type="radio" name="MetodoPago" value="Transferencia bancaria"><font>Transferencia bancaria</font><br>
+              <input type="radio" name="MetodoPago" value="QR"><font>Pago por QR (15% de recargo)</font>
+              <input type="radio" name="MetodoPago" value="Cripto"><font>Transferencia Cripto(USDT-DAI)</font><br><br>
+            </div>
+            
+            <div class="form-section">
+              <label for="registro_conducir"><font>Adjuntar Registro de Conducir (PNG):</font></label>
+              <input type="file" id="registro_conducir" name="registro_conducir" accept="image/png"><br><br>
+            
+              <label for="vehiculo"><font>Selecciona un vehículo:</font></label>
+              <select id="vehiculo" name="vehiculo">
+                <option value="Volkswagen Suran 2015">Volkswagen Suran 2015</option>
+                <option value="Chevrolet Trucker (Familiar) 2022">Chevrolet Trucker (Familiar) 2022</option>
+                <option value="Chevrolet Onix 2019">Chevrolet Onix 2019</option>
+                <option value="Volkswagen Gol 2023">Volkswagen Gol 2023</option>
+                <option value="Toyota Etios 2017 Manual">Toyota Etios 2017 Manual</option>
+                <option value="Peugeot 206 2000 Tunning">Peugeot 206 2000 Tunning</option>
+              </select><br><br>
+            
+              <input type="submit" value="Enviar">
+            </div>
+        </div>
+          </form>
+          
+        <p><font>Si usted hace click en el botón "Enviar", la información sera enviada a la página "show_data.html".</font></p>
+    </menu>
+    <footer class="footer seccion">
+      <a class="fa-brands fa-twitter" href="https://www.twitter.com" title="Twitter del negocio" target="_blank"></a>
+      <a class="fa-brands fa-facebook" href="https://www.facebook.com"  title="Facebook del negocio" target="_blank"></a>
+      <a class="fa-brands fa-instagram" href="https://www.instagram.com" title="Instagram del negocio." target="_blank"></a>
+      <br>
+      <p class="copyright">DERECHOS RESERVADOS RentingFueguinos Renting@gmail.com 2024</p>
+      <br>
+  </footer>
+
+  </body>
+    
+</html>
